@@ -1,0 +1,35 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}{% if category %}{{ category.name }}{% else %}Products{% endif %}{% endblock %}
+
+{% block content %}
+    {% if category %}
+        <h1>{{ category.name }}</h1>
+    {% else %}
+        <h1>Products</h1>
+    {% endif %}
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <div class="sidebar-item">
+                <a href="#" class="cleaned-link">Ice cream</a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#" class="cleaned-link">Ice cream</a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#" class="cleaned-link">Ice cream</a>
+            </div>
+            <div class="sidebar-item">
+                <a href="#" class="cleaned-link">Ice cream</a>
+            </div>
+        </div>
+    </div>
+    <div class="products">
+        {% for product in products %}
+        <div class="product-item">
+            <a href="{% url 'shop:product_detail' product.slug %}" class="cleaned-link">{{ product.name }}</a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
