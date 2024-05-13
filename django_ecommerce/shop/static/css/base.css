@@ -1,5 +1,5 @@
 body {
-    font-family: "Briem Hand", cursive;
+    font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
@@ -23,18 +23,6 @@ body {
     display: flex;
 }
 
-.header-link {
-    color: #000000;
-    text-decoration: none;
-    margin: 10px;
-    padding: auto;
-    transition: 0.2s;
-}
-
-.header-link:hover {
-    color: #727272;
-}
-
 .logo-img {
     height: 70px;
     width: auto;
@@ -42,6 +30,7 @@ body {
 
 footer {
     margin-top: auto;
+    border-top: 1px solid black;
 }
 
 .footer-list {
@@ -53,20 +42,8 @@ footer {
     display: flex;
 }
 
-.footer-link {
-    color: #000000;
-    text-decoration: none;
-    margin: 10px;
-    padding: auto;
-    transition: 0.2s;
-}
-
-.footer-link:hover {
-    color: #727272;
-}
-
 .sidebar {
-    display: flex;
+    display: block;
     flex-direction: column;
     justify-content: space-between;
     height: 630px;
@@ -96,3 +73,50 @@ footer {
 .cleaned-link:hover {
     color: #727272;
 }
+
+.products {
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0%;
+}
+
+.product-item {
+    margin: 10px 10px 10px 10px;
+}
+
+.product-name {
+    text-align: right;
+    font-weight: bold;
+}
+
+.product-img {
+    height: 300px;
+    width: 300px;
+}
+
+.content {
+    display: flex;
+} 
+
+/* .products {
+    display: flex;
+    justify-content: center;
+    float: left;
+    width: 70%;
+    margin-right: -220px;
+    overflow: hidden;
+}
+
+.products .product-item {
+    width: 25%;
+    padding: 10px 20px 10px 0px;
+    float: left;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.products .product-item .product-img {
+    width: 100%;
+    margin-bottom: 8px;
+} */

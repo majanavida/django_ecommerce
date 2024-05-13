@@ -12,23 +12,21 @@
     <div class="sidebar">
         <div class="sidebar-section">
             <div class="sidebar-item">
-                <a href="#" class="cleaned-link">Ice cream</a>
+                <a class="cleaned-link" href="{% url 'shop:product_list' %}">All</a>
             </div>
-            <div class="sidebar-item">
-                <a href="#" class="cleaned-link">Ice cream</a>
-            </div>
-            <div class="sidebar-item">
-                <a href="#" class="cleaned-link">Ice cream</a>
-            </div>
-            <div class="sidebar-item">
-                <a href="#" class="cleaned-link">Ice cream</a>
-            </div>
+            {% for c in categories %}
+                <div class="sidebar-item">
+                    <a href="{{ c.get_absolute_url }}" class="cleaned-link">{{ c.name }}</a>
+                </div>
+            {% endfor %}
         </div>
     </div>
     <div class="products">
         {% for product in products %}
         <div class="product-item">
-            <a href="{% url 'shop:product_detail' product.slug %}" class="cleaned-link">{{ product.name }}</a>
+            <a href="{% url 'shop:product_detail' product.slug %}"><img class="product-img" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_img.png' %}{% endif %}"></a><br>
+            <a href="{% url 'shop:product_detail' product.slug %}" class="cleaned-link product-name">{{ product.name }}</a><br>
+            $ {{ product.price }}
         </div>
         {% endfor %}
     </div>
