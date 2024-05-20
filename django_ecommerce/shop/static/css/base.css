@@ -99,24 +99,6 @@ footer {
     display: flex;
 } 
 
-/* .products {
-    display: flex;
-    justify-content: center;
-    float: left;
-    width: 70%;
-    margin-right: -220px;
-    overflow: hidden;
+.product-detail {
+    display: inline;
 }
-
-.products .product-item {
-    width: 25%;
-    padding: 10px 20px 10px 0px;
-    float: left;
-    text-align: center;
-    line-height: 1.2;
-}
-
-.products .product-item .product-img {
-    width: 100%;
-    margin-bottom: 8px;
-} */

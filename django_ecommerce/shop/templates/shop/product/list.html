@@ -24,8 +24,8 @@
     <div class="products">
         {% for product in products %}
         <div class="product-item">
-            <a href="{% url 'shop:product_detail' product.slug %}"><img class="product-img" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_img.png' %}{% endif %}"></a><br>
-            <a href="{% url 'shop:product_detail' product.slug %}" class="cleaned-link product-name">{{ product.name }}</a><br>
+            <a href="{{ product.get_absolute_url }}"><img class="product-img" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_img.png' %}{% endif %}"></a><br>
+            <a href="{{ product.get_absolute_url }}" class="cleaned-link product-name">{{ product.name }}</a><br>
             $ {{ product.price }}
         </div>
         {% endfor %}

@@ -44,5 +44,9 @@ class Product(models.Model):
         verbose_name_plural = 'Products'
         
     
+    def get_absolute_url(self):
+        return reverse('shop:product_detail', args=[self.id ,self.slug])
+        
+    
     def __str__(self):
         return self.name
